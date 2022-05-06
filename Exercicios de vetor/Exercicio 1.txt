@@ -1,0 +1,60 @@
+#include<stdio.h>
+#define T 10
+
+void ler(int vetor[])
+{
+    int i;
+
+    for(i=0; i<T;i++)
+    {
+        printf("Digite o numero %d do vetor : ", i);
+        scanf("%d", &vetor[i]);
+    }
+
+}
+
+float calcular (int vetor[])
+{
+    int i, soma= 0;
+    float media;
+    for(i=0; i<T;i++)
+    {
+        soma= soma + vetor[i];
+    }
+   
+
+    media=(float) soma/10;
+    return media;
+}
+int maior_que_media(int vetor[], float media)
+{
+    int i, maior=0;
+     for(i=0; i<T;i++)
+    {
+        if (media < vetor[i])
+        {
+            maior++;
+        }
+    }
+
+    return maior;
+}
+
+
+void apresentar (float media, int maior)
+{
+    printf(" A media dos numeros digitados = %.2f e %d sao maiores que a media.", media, maior);
+}
+
+void main()
+{
+    int vetor[T], result;
+    float resultado;
+
+    ler(vetor);
+    resultado = calcular(vetor);
+    result = maior_que_media(vetor, resultado);
+    printf("\n");
+    apresentar(resultado, result);
+
+}
