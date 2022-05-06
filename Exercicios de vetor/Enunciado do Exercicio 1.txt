@@ -1,0 +1,2 @@
+Elaborar um programa para ler um vetor com tamanho 10 do tipo inteiro. Em seguida, determinar
+a média dos elementos do vetor e quantos elementos maiores que a média estão presentes no vetor.
